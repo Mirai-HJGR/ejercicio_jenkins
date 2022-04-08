@@ -9,8 +9,8 @@ import javax.persistence.Table;
 @Table(name="categorias")
 public class Categoria {
 	@Id
-	@Column(name="id_categorias")
-	private int id_categorias;
+	@Column(name="id_categoria")
+	private int id_categoria;
 	@Column(name="descripcion")
 	private String descripcion;
 	
@@ -19,14 +19,14 @@ public class Categoria {
 	}
 	public Categoria(int id_categoria, String descripcion) {
 		super();
-		this.id_categorias = id_categoria;
+		this.id_categoria = id_categoria;
 		this.descripcion = descripcion;
 	}
 	public int getId_categoria() {
-		return id_categorias;
+		return id_categoria;
 	}
 	public void setId_categoria(int id_categoria) {
-		this.id_categorias = id_categoria;
+		this.id_categoria = id_categoria;
 	}
 	public String getDescripcion() {
 		return descripcion;
@@ -36,7 +36,7 @@ public class Categoria {
 	}
 	@Override
 	public String toString() {
-		return "Categorias [id_categoria=" + id_categorias + ", descripcion=" + descripcion + "]";
+		return "Categorias [id_categoria=" + id_categoria + ", descripcion=" + descripcion + "]";
 	}
 	
 }
