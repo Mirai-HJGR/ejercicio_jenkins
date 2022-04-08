@@ -12,6 +12,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
     networks:
       redhector:
+        aliases:
+         - bbddsql
   mongo:
     image: mongo
     restart: always
@@ -22,6 +24,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     networks:
       redhector:
+        aliases:
+         - mongodb
   mongo-express:
     image: mongo-express
     restart: always
