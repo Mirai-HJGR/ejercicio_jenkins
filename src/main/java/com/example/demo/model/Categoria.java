@@ -1,0 +1,42 @@
+package com.example.demo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="categorias")
+public class Categoria {
+	@Id
+	@Column(name="id_categorias")
+	private int id_categorias;
+	@Column(name="descripcion")
+	private String descripcion;
+	
+	public Categoria() {
+		super();
+	}
+	public Categoria(int id_categoria, String descripcion) {
+		super();
+		this.id_categorias = id_categoria;
+		this.descripcion = descripcion;
+	}
+	public int getId_categoria() {
+		return id_categorias;
+	}
+	public void setId_categoria(int id_categoria) {
+		this.id_categorias = id_categoria;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	@Override
+	public String toString() {
+		return "Categorias [id_categoria=" + id_categorias + ", descripcion=" + descripcion + "]";
+	}
+	
+}

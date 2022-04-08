@@ -1,0 +1,4 @@
+FROM mysql
+ENV MYSQL_DATABASE curso
+
+COPY sql-script/ /docker-entrypoint-initdb.d/
