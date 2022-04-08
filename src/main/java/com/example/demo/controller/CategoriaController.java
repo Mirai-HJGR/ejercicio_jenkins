@@ -24,6 +24,7 @@ public class CategoriaController {
 		
 	@GetMapping("/list_all")
 	public ArrayList<Categoria> get_libros(){
+		System.out.println("entra");
 		return categoriaservice.listado_categorias();
 	}
 
